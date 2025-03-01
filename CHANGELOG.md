@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/cgamcs/cgamcs-ui/compare/v1.4.0...v1.4.1) (2025-03-01)
+
+
+### Bug Fixes
+
+* **login component:** centrando contenido ([c0c5eb0](https://github.com/cgamcs/cgamcs-ui/commit/c0c5eb08fadf5d9d741ea89fad855fd01dec93a7))
+
 # [1.4.0](https://github.com/cgamcs/cgamcs-ui/compare/v1.3.0...v1.4.0) (2025-03-01)
 
 
