@@ -1,3 +1,11 @@
+# [1.4.0](https://github.com/cgamcs/cgamcs-ui/compare/v1.3.0...v1.4.0) (2025-03-01)
+
+
+### Features
+
+* **login component:** agregando formulario de login ([1e651f3](https://github.com/cgamcs/cgamcs-ui/commit/1e651f3094318739e2f0290db7360fb84270bdc1))
+* **login component:** agregando formulario de login ([e10592c](https://github.com/cgamcs/cgamcs-ui/commit/e10592c1995e405cedda04fe8a5b4339a449ee3c))
+
 # [1.3.0](https://github.com/cgamcs/cgamcs-ui/compare/v1.2.0...v1.3.0) (2025-03-01)
 
 
