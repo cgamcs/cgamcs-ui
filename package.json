@@ -14,6 +14,31 @@
     },
     "./style.css": "./dist/cgamcs-ui.css"
   },
+  "release": {
+    "branches": ["master", "next"]
+  },
+  "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      [
+        "@semantic-release/changelog",
+        {
+          "changelogFile": "CHANGELOG.md"
+        }
+      ],
+      "@semantic-release/npm",
+      "@semantic-release/github",
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "package.json",
+            "CHANGELOG.md"
+          ],
+          "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        }
+      ]
+    ],
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -53,6 +78,7 @@
     "globals": "^15.15.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "semantic-release": "^24.2.3",
     "storybook": "^8.6.0",
     "tailwind-merge": "^3.0.2",
     "tailwindcss": "^4.0.9",
