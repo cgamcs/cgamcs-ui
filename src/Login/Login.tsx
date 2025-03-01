@@ -21,6 +21,7 @@ export interface LoginFormProps extends Omit<HTMLAttributes<HTMLDivElement>, 'on
     forgotPasswordLink?: string;
 }
 
+// Estilo
 export const Login: FC<LoginFormProps> = forwardRef<HTMLDivElement, LoginFormProps>(
     ({ onSubmit, className, layout, registerLink = "/register", forgotPasswordLink = "/forgot-password", ...props }, ref) => {
         return (
