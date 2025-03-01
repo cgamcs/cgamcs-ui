@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/cgamcs/cgamcs-ui/compare/v1.2.0...v1.3.0) (2025-03-01)
+
+
+### Features
+
+* **text component:** cambiando de span a p ([17ad2fd](https://github.com/cgamcs/cgamcs-ui/commit/17ad2fdb2c90cb0ad18c3201337171e8866b3990))
+
 # [1.2.0](https://github.com/cgamcs/cgamcs-ui/compare/v1.1.1...v1.2.0) (2025-03-01)
 
 
