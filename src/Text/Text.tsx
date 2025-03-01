@@ -46,7 +46,7 @@ const textStyles = cva('w-full', {
 
 type TextProps<C extends ElementType> = PolymorphicComponentPropsWithRef<C, VariantProps<typeof textStyles>>
 
-type TextComponent = <C extends ElementType = 'p'>(props: TextProps<C>) => ReactElement | null
+type TextComponent = <C extends ElementType = 'span'>(props: TextProps<C>) => ReactElement | null
 
 /* export const Text: FC<TextProps> = forwardRef<HTMLParagraphElement, TextProps>(({ children, emphasis, size, weight, align, italic, underline, className, ... props }, ref) => {
     return (
@@ -56,8 +56,8 @@ type TextComponent = <C extends ElementType = 'p'>(props: TextProps<C>) => React
     )
 }) */
 
-/* export const Text: TextComponent = forwardRef(<C extends ElementType = 'p'>({as, children, emphasis, size, weight, align, italic, underline, className, ... props}: TextProps<C>, ref?: PolymorphicRef<C>) => {
-    const Component = as || 'p'
+/* export const Text: TextComponent = forwardRef(<C extends ElementType = 'span'>({as, children, emphasis, size, weight, align, italic, underline, className, ... props}: TextProps<C>, ref?: PolymorphicRef<C>) => {
+    const Component = as || 'span'
 
     return(
         <Component className={cn(textStyles({emphasis, size, weight, align, italic, underline}), className)} {... props} ref={ref}>
@@ -67,7 +67,7 @@ type TextComponent = <C extends ElementType = 'p'>(props: TextProps<C>) => React
 }) as TextComponent */
 
 
-export const Text = forwardRef(function Text<C extends ElementType = "p">({ as, children, emphasis, size, weight, align, italic, underline, className, ...rest }: Omit<TextProps<C>, "ref">,ref: React.ForwardedRef<Element>) {
+export const Text = forwardRef(function Text<C extends ElementType = 'span'>({ as, children, emphasis, size, weight, align, italic, underline, className, ...rest }: Omit<TextProps<C>, "ref">,ref: React.ForwardedRef<Element>) {
   const Component = (as || "p") as ElementType
 
   return (
