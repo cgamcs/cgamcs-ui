@@ -7,7 +7,7 @@ const meta: Meta<typeof Login> = {
     component: Login,
     tags: ['autodocs'],
     parameters: {
-        layout: 'fullscreen'
+        layout: 'centered'
     },
     decorators: [
         (Story) => (
