@@ -15,7 +15,7 @@
     "./style.css": "./dist/cgamcs-ui.css"
   },
   "release": {
-    "branches": ["master", "next"]
+    "branches": ["main", "next"]
   },
   "plugins": [
       "@semantic-release/commit-analyzer",
