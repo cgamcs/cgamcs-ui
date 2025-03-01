@@ -66,7 +66,7 @@ type TextComponent = <C extends ElementType = 'span'>(props: TextProps<C>) => Re
     )
 }) as TextComponent */
 
-
+// comentario
 export const Text = forwardRef(function Text<C extends ElementType = 'span'>({ as, children, emphasis, size, weight, align, italic, underline, className, ...rest }: Omit<TextProps<C>, "ref">,ref: React.ForwardedRef<Element>) {
   const Component = (as || "p") as ElementType
 
