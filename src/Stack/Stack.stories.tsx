@@ -8,12 +8,19 @@ interface ExampleComponentProps extends ComponentProps<typeof Stack> {
 }
 
 const meta: Meta<ExampleComponentProps> = {
-    title: 'Components/Stack',
+    title: 'Layout/Stack',
     component: Stack,
     tags: ['autodocs'],
     parameters: {
-        layout: 'centered'
+        layout: 'fullscreen'
     },
+    decorators: [
+        (Story) => (
+            <div className="w-full p-4">
+                <Story />
+            </div>
+        )
+    ],
     argTypes: {
         spacing: {
             control: 'number',
@@ -21,6 +28,18 @@ const meta: Meta<ExampleComponentProps> = {
         },
         childrenQuantity: {
             control: 'number'
+        },
+        justify: {
+            type: 'string',
+            options: ['start', 'end', 'center', 'between', 'around', 'evenly', 'stretch', 'baseline', 'normal'],
+            control: 'select',
+            description: 'justify-content'
+        },
+        contentAlign: {
+            type: 'string',
+            options: ['start', 'end', 'center', 'baseline', 'stretch'],
+            control: 'select',
+            description: 'content-items'
         }
     }
 }
@@ -41,8 +60,10 @@ const ExampleComponent: Story = {
 export const Default: Story = {
     ... ExampleComponent,
     args: {
-      childrenQuantity: 2,
+      childrenQuantity: 4,
       spacing: 4,
-      col: false
+      col: false,
+      justify: 'between',
+      contentAlign: 'center'
     },
 };
