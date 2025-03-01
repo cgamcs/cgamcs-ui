@@ -1,0 +1,69 @@
+{
+  "name": "cgamcs-ui",
+  "version": "1.0.3",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/cgamcs-ui.umd.cjs",
+  "module": "./dist/cgamcs-ui.js",
+  "exports": {
+    ".": {
+      "import": "./dist/cgamcs-ui.js",
+      "require": "./dist/cgamcs-ui.umd.cjs"
+    },
+    "./style.css": "./dist/cgamcs-ui.css"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "generate-safelist": "node generate-safelist.mjs"
+  },
+  "peerDependencies": {
+    "@tailwindcss/vite": "^4.0.9",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwindcss": "^4.0.9"
+  },
+  "devDependencies": {
+    "@chromatic-com/storybook": "^3.2.5",
+    "@eslint/js": "^9.21.0",
+    "@storybook/addon-essentials": "^8.6.0",
+    "@storybook/addon-interactions": "^8.6.0",
+    "@storybook/addon-onboarding": "^8.6.0",
+    "@storybook/blocks": "^8.6.0",
+    "@storybook/react": "^8.6.0",
+    "@storybook/react-vite": "^8.6.0",
+    "@storybook/test": "^8.6.0",
+    "@tailwindcss/vite": "^4.0.9",
+    "@types/node": "^22.13.5",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@vitejs/plugin-react": "^4.3.4",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "eslint": "^9.21.0",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "eslint-plugin-storybook": "^0.11.3",
+    "globals": "^15.15.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "storybook": "^8.6.0",
+    "tailwind-merge": "^3.0.2",
+    "tailwindcss": "^4.0.9",
+    "typescript": "~5.7.2",
+    "typescript-eslint": "^8.24.1",
+    "vite": "^6.2.0",
+    "vite-plugin-dts": "^4.5.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:storybook/recommended"
+    ]
+  }
+}
